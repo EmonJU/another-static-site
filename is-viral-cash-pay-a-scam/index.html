@@ -363,7 +363,19 @@ span.posted-on {
 			<div class="container">
 
 									<div class="head-date">
-						26 Jul, 2019					</div><!-- .head-date -->
+						<script>
+var today = new Date();
+var todayStr = new Date().toString().slice(4,7);
+var dd = today.getDate();
+var mm = todayStr;
+
+var yyyy = today.getFullYear();
+if (dd < 10) {
+  dd = '0' + dd;
+} 
+var today = dd + ' ' + mm + ', ' + yyyy;
+document.querySelector(".head-date").innerHTML = today;
+</script>					</div><!-- .head-date -->
 													<div id="top-nav">
 						<nav class="top-navigation"><ul id="menu-top-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a title="
 				
